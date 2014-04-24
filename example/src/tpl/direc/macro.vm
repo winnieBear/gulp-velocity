@@ -1,0 +1,22 @@
+##======================macro.vm begin ==========================
+
+##commonMacro and blockMacro defined in global-macro/
+#commonMacro('Hello ' $user.name '!')
+#commonMacro('Hello ' 'everyone' '!')
+
+ 
+#@blockMacro('Hello')
+--->bodyContent
+Name: $user.name
+bodyContent<---
+#end 
+
+
+#macro(localMacro, $a)
+$a
+#end
+
+#localMacro('local macro was called')
+#localMacro('local macro was called again')
+
+##======================macro.vm end ==========================

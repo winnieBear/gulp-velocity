@@ -1,0 +1,18 @@
+#parse('./direc/macro.vm')
+#parse('./direc/define.vm')
+#parse('./direc/set.vm')
+#parse('./direc/if.vm')
+#parse('./direc/loop.vm')
+#parse('./direc/evaluate.vm')
+
+
+#parse('./expr/expr.vm')
+
+#parse('./ref/ref.vm')
+
+#include('./static/plain-text.txt','./static/more_include.txt')
+
+## comment
+#* block comment *#
+#[[ unparsed content ]]#
+

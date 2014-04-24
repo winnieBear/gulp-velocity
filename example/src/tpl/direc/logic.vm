@@ -1,0 +1,26 @@
+##======================login.vm begin ==========================
+##logic 
+#set($foo = true)
+#set($bar = false)
+## logical AND
+#if( $foo && $bar )
+   <strong> This AND that</strong>
+#end
+
+## logical OR
+#if( $foo || $bar )
+    <strong>This OR That</strong>
+#end
+
+##logical NOT
+#if( !$bar )
+  <strong>NOT that</strong>
+#end
+
+#if( $foo == $bar)
+	it's true! 
+#else 
+	it's not!
+#end
+
+##======================login.vm begin ==========================

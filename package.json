@@ -1,0 +1,36 @@
+{
+    "name": "gulp-velocity",
+    "description": "A gulp plugin for rendering velocity template with JSON data,based on the node module velocity.",
+    "version": "0.0.1",
+    "keywords": [
+        "gulp-velocity",
+        "gulp",
+        "gulpplugin",
+        "gulp-plugin"
+    ],
+    "homepage": "https://github.com/winnieBear/gulp-velocity",
+    "bugs": {
+        "url": "https://github.com/winnieBear/gulp-velocity/issues"
+    },
+    "author": "winnieBear <fengyang321@gmail.com>",
+    "main": "./index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/winnieBear/gulp-velocity.git"
+    },
+    "dependencies": {
+        "velocity": "git://github.com/fool2fish/velocity.git#1584f89",
+        "event-stream": "^3.0.20",
+        "chalk": "0.4.0"
+    },
+    "engines": {
+        "node": ">= 0.9.0"
+    },
+    "licenses": [{
+        "type": "MIT"
+    }],
+    "readme": "readme",
+    "readmeFilename": "README.md",
+    "_id": "gulp-velocity@0.0.1",
+    "_from": "gulp-velocity@*"
+}

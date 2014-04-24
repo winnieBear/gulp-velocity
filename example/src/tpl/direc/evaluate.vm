@@ -1,0 +1,4 @@
+##======================evaluate.vm begin ==========================
+#evaluate('$dataForEval')
+#evaluate("$dataForEval")
+##======================evaluate.vm begin ==========================

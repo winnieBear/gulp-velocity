@@ -1,0 +1,10 @@
+##======================if.vm begin =========================
+Date: $date.format($date.year, $date.month, $date.day)
+#if ( !$date.weather )
+  Cannot get the weather info.
+#elseif ($date.weather == 'sunny')
+  Today is sunny.
+#else 
+  Today is not sunny.
+#end
+##======================if.vm begin ==========================

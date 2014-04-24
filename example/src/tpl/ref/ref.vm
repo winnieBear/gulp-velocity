@@ -1,0 +1,19 @@
+>>>ref.vm
+ID: $id
+Name: $user.name $user.getName() $user.get("name")
+Name length: $user.name.length()
+Nick: $!user.nick ${user.nick}
+Github: $user.github
+Favorites length: $user.favorites.size()
+Most favorite: $user.favorites[0]
+$method.foo()
+$method.bar()
+$nonexist
+$nonexist.property
+$nonexist.property.method()
+#* 
+bellow are references could cause error
+$method.undef.undef
+$method.undef.foo()
+*#
+ref.vm<<<

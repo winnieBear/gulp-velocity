@@ -1,0 +1,8 @@
+##======================define.vm begin ==========================
+#define($userInfo)
+user info:
+name: $user.name
+github: $user.github
+#end
+$userInfo
+##======================define.vm begin ==========================

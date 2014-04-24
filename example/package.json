@@ -1,0 +1,13 @@
+{
+  "name": "name",
+  "version": "0.0.0-ignored",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-rename":"*",
+    "gulp-util":"*",
+    "gulp-plumber":"*"
+  }
+}

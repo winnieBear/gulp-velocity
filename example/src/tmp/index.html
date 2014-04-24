@@ -1,0 +1,212 @@
+
+
+
+
+Arguments of commonMacro: [Hello , fool2fish, !]
+
+
+Arguments of commonMacro: [Hello , everyone, !]
+
+
+ 
+
+Argument of blockMacro: Hello
+Body content: 
+--->bodyContent
+Name: fool2fish
+bodyContent<---
+
+ 
+
+
+
+
+
+local macro was called
+
+
+local macro was called again
+
+
+
+
+
+
+user info:
+name: fool2fish
+github: https://github.com/fool2fish
+
+
+
+
+Company: alipay.com
+
+
+$title in alipay.com
+
+
+Date: 2014 - 3 - 28
+ 
+  Today is not sunny.
+
+
+
+
+
+  key: name, value: fool2fish
+
+  key: prop, value: name
+
+  key: github, value: https://github.com/fool2fish
+
+  key: favorites, value: food,travel,comic,...
+
+
+
+  1: name
+
+  2: prop
+
+  3: github
+
+  4: favorites
+
+
+ 
+  1: food 
+  
+ 
+  2: travel 
+  
+ 
+  3: comic 
+   
+  	
+
+<ul>
+
+    <li>book</li>
+
+    <li>pen</li>
+
+    <li>rubber</li>
+
+</ul> 
+
+<ul>
+
+    <li>Key: book -> Value: 100</li>
+
+    <li>Key: pen -> Value: 50</li>
+
+    <li>Key: rubber -> Value: 10</li>
+
+</ul> 
+
+
+
+    tom , 
+
+    jack , 
+
+    jane 
+
+
+
+<table>
+
+    <tr>
+    	<td>0</td>
+    	<td>
+    	
+    	
+    	tom
+    	</td>
+    </tr>
+
+    <tr>
+    	<td>1</td>
+    	<td>
+    	
+    	
+    	jack
+    	</td>
+    </tr>
+
+    <tr>
+    	<td>2</td>
+    	<td>
+    	
+    	
+    	jane
+    	</td>
+    </tr>
+
+</table> 
+
+
+
+@@$user.name@@
+@@fool2fish@@
+
+
+
+>>>expr.vm
+
+
+First item of range: 1
+
+First item of list: fool2fish
+
+One of map's key-value pair: id = 00000001
+
+Unary operation: false
+
+Integer: 0
+
+Float: 10.1
+
+Addition: 6
+
+Dstring: my name is $user.name
+
+Dstring: my name is fool2fish
+
+expr.vm<<<
+
+>>>ref.vm
+ID: 00000001
+Name: fool2fish fool2fish fool2fish
+Name length: 9
+Nick:  ${user.nick}
+Github: https://github.com/fool2fish
+Favorites length: 4
+Most favorite: food
+method.foo() is called!
+$method.bar()
+$nonexist
+$nonexist.property
+$nonexist.property.method()
+
+ref.vm<<<
+
+>>>plain-text
+=======================
+these code is not parsed!
+eg.
+	id is : $id
+	name	: $user.name 
+=======================
+plain-text<<<>>>more-include-text
+=======================
+these code is not parsed!
+eg.
+	id is : $id
+	name	: $user.name 
+=======================
+more-include-text<<<
+
+
+
+ unparsed content 
+
