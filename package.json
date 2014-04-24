@@ -19,7 +19,7 @@
         "url": "https://github.com/winnieBear/gulp-velocity.git"
     },
     "dependencies": {
-        "velocity": "0.3.0",
+        "velocity": "git://github.com/fool2fish/velocity.git#1584f89",
         "event-stream": "^3.0.20",
         "chalk": "0.4.0"
     },
