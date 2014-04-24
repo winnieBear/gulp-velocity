@@ -18,29 +18,33 @@ function getContext(opt){
     tplFileName = path.basename(filePath,'.vm'),
     tplRootAbsPath = path.resolve(tplRoot),
     tplRelativePath = tplDirName.replace(tplRootAbsPath,''),
-    datafilePath = opt.dataPath +  tplRelativePath + path.sep + tplFileName + '.json',
+    datafilePath = opt.dataPath +  tplRelativePath + path.sep + tplFileName + '.js',
     datafileAbsPath = path.resolve(datafilePath);
 
   if(!fs.existsSync(datafileAbsPath)){
     throw new Error(PLUGIN_NAME + ": the corresponding data file [" + datafileAbsPath + "] is not exists!");
   }
-  var dataContent = fs.readFileSync(datafileAbsPath,{"encoding":"utf-8"});
-
-  var data = {};
-  try{
-    data =  JSON.parse(dataContent);
-  }catch(err){
-    throw new Error(PLUGIN_NAME + ": the data file [" + datafileAbsPath + "] is not JSON format file!");
-  }
-
-  return data;
+  
+  return datafileAbsPath;
 }
 
-module.exports = function(opt){
+//backup opt
+var back_opt = null;
 
+module.exports = function(opt){
+  if(back_opt === null){
+    back_opt = opt;
+  }
   function renderTpl(file){
     console.log("[gulp-velocity] render tpl ",colors.magenta(file.path));
-
+    //clone opt,because velocity may modify opt
+    var opt = {};
+    for(var p in back_opt){
+      if(back_opt.hasOwnProperty(p)){
+        opt[p] = back_opt[p];
+      }
+    }
+    
     if(file.isNull()){
       return this.emit('data', file); // pass along
     }
