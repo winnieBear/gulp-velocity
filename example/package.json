@@ -8,6 +8,7 @@
     "gulp": "*",
     "gulp-rename":"*",
     "gulp-util":"*",
-    "gulp-plumber":"*"
+    "gulp-plumber":"*",
+    "gulp-velocity":"git://github.com/winnieBear/gulp-velocity.git"
   }
 }
