@@ -1,6 +1,6 @@
 {
     "name": "gulp-velocity",
-    "description": "A gulp plugin for rendering velocity template with JSON data,based on the node module velocity.",
+    "description": "A gulp plugin for rendering velocity template, based on the node module velocity.",
     "version": "0.0.1",
     "keywords": [
         "gulp-velocity",
