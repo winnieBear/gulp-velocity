@@ -92,6 +92,6 @@ you can use it as below:
 ### why use gulp-plumber
 The plugin of gulp-plumber is used in my example for the usage scenario in which your template file has a syntax error and gulp-velocity will throw an error, which will break the gulp event stream, some discussions is [here](https://github.com/gulpjs/gulp/issues/75). To continue the stream when error happens, you can use the plugin of [gulp-plumber](https://www.npmjs.org/package/gulp-plumber).
 
-### why the dependency package of "velocity" is a url, not version
+### why the dependency package of "velocity" is a url, not a version number
 because the node velocity is keep updating all the times, the latest verison is 0.3.0, which has bug in it, the fixed version is still not update to npm install package, but the code of dependency url in package.json has fixed the bug.
 
