@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>gulp-velocity example page</title>
+</head>
+<body>
+<P>hello world!</P>
+
 #parse('./direc/macro.vm')
 #parse('./direc/define.vm')
 #parse('./direc/set.vm')
@@ -16,3 +25,6 @@
 #* block comment *#
 #[[ unparsed content ]]#
 
+<P>bye-bye world!</P> 
+</body>
+</html>

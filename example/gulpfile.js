@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var velocity = require('gulp-velocity');
+var	connect = require('gulp-connect-multi')();
 
 
 var config = {
@@ -15,14 +16,27 @@ var config = {
 		"globalMacroPath":"./src/tpl/global-macro",
 		"dataPath":"./src/data/" // test data root path
 	},
-	'dist_tpl':'./src/tmp'
+	'tmp_output':'./src/tmp/'
 };
 
 
+//connect
+gulp.task('connect', connect.server({
+	root:[config.tmp_output],
+	port:1337,
+	lviereload:true
+}));
+
+
+// html
+gulp.task('html', function() {
+	gulp.src(config.tmp_output + '/*.html')
+		.pipe(connect.reload());
+});
 
 // tpl
 gulp.task('tpl', function() {
-	gulp.src('./src/tpl/**/*.vm')
+	gulp.src(config.tpl_config.root + '**/*.vm')
 	.pipe(plumber())
 	.pipe(
 		velocity(config.tpl_config)
@@ -31,11 +45,18 @@ gulp.task('tpl', function() {
 	.pipe(rename({
 		extname:".html"
 	}))
-	.pipe(gulp.dest(config.dist_tpl));
+	.pipe(gulp.dest(config.tmp_output));
 
 });
 
 
 
 
-gulp.task('default', ['tpl']);
+
+gulp.task('watch', function() {
+	gulp.watch([config.tpl_config.root + '**/*.vm'], ['tpl']);
+	gulp.watch([config.tmp_output + '/*.html'], ['html']);
+});
+
+//gulp.task('default', ['tpl']);
+gulp.task('default', ['connect','watch']);

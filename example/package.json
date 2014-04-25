@@ -9,6 +9,7 @@
     "gulp-rename":"*",
     "gulp-util":"*",
     "gulp-plumber":"*",
+    "gulp-connect-multi": "*",
     "gulp-velocity":"git://github.com/winnieBear/gulp-velocity.git"
   }
 }
