@@ -58,7 +58,7 @@ src
 ```
 - tpl directory to store the template file
 
-- data directory to store the simulating data, one data file is corresponding to a template file, the file is like literal object in javascript.
+- data directory to store the simulating data, one data file is corresponding to a template file, the data file format look like literal object in javascript.
 
 - tmp directory to store the rendered result file, which is rendered based on the template file and the corresponding simulating data file.
 
