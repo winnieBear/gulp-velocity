@@ -1,7 +1,7 @@
 gulp-velocity
 =============
 
-A gulp plugin for rendering velocity template with simulating data file, based on the node module velocity.
+A gulp plugin for rendering velocity template, based on the node module velocity.
 
 [node velocity](https://github.com/fool2fish/velocity)
 
