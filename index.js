@@ -6,7 +6,6 @@ var path = require('path');
 var fs = require('fs');
 var util = require('util');
 
-
 // Consts
 const PLUGIN_NAME = 'gulp-velocity';
 
@@ -29,22 +28,31 @@ function getContext(opt){
 }
 
 //backup opt
-var back_opt = null;
+var backOption = null;
+var globalMacroPath = '';
 
 module.exports = function(opt){
-  if(back_opt === null){
-    back_opt = opt;
+  if(backOption === null){
+    backOption = opt;
+    globalMacroPath = path.resolve(opt.globalMacroPath);
   }
   function renderTpl(file){
     console.log("[gulp-velocity] render tpl ",colors.magenta(file.path));
+    
     //clone opt,because velocity may modify opt
     var opt = {};
-    for(var p in back_opt){
-      if(back_opt.hasOwnProperty(p)){
-        opt[p] = back_opt[p];
+    for(var p in backOption){
+      if(backOption.hasOwnProperty(p)){
+        opt[p] = backOption[p];
       }
     }
     
+    //if file in global macro dir, jump it
+    if(file.path.indexOf(globalMacroPath) === 0 ){
+      console.log("[gulp-velocity] info: ",colors.yellow(file.path + ' is a global macro,jump it!!'));
+      return this.emit('end');
+    }
+
     if(file.isNull()){
       return this.emit('data', file); // pass along
     }

@@ -12,6 +12,7 @@ var config = {
 		"root":"./src/tpl/",// tpl root 
 		"encoding":"utf-8",
 		"macro":"./src/tpl/global-macro/macro.vm",//global macro defined file
+		"globalMacroPath":"./src/tpl/global-macro",
 		"dataPath":"./src/data/" // test data root path
 	},
 	'dist_tpl':'./src/tmp'
@@ -24,7 +25,7 @@ gulp.task('tpl', function() {
 	gulp.src('./src/tpl/**/*.vm')
 	.pipe(plumber())
 	.pipe(
-		velocity(config['tpl_config'])
+		velocity(config.tpl_config)
 		.on('error', gutil.log)
 	)
 	.pipe(rename({
