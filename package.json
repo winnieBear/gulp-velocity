@@ -1,7 +1,7 @@
 {
     "name": "gulp-velocity",
     "description": "A gulp plugin for rendering velocity template, based on the node module velocity.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "gulp-velocity",
         "gulp",
@@ -19,7 +19,7 @@
         "url": "https://github.com/winnieBear/gulp-velocity.git"
     },
     "dependencies": {
-        "velocity": "git://github.com/fool2fish/velocity.git#1584f89",
+        "velocity": "0.4.0",
         "event-stream": "^3.0.20",
         "chalk": "0.4.0"
     },
@@ -29,8 +29,8 @@
     "licenses": [{
         "type": "MIT"
     }],
-    "readme": "readme",
+    "readme": "A gulp plugin for rendering velocity template, based on the node module velocity. For more info read the readme.md.",
     "readmeFilename": "README.md",
-    "_id": "gulp-velocity@0.0.1",
+    "_id": "gulp-velocity@0.0.2",
     "_from": "gulp-velocity@*"
 }
