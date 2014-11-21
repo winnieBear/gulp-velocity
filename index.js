@@ -21,6 +21,12 @@ function getContext(opt){
     datafileAbsPath = path.resolve(datafilePath);
 
   if(!fs.existsSync(datafileAbsPath)){
+  
+    if(opt.skipContext === true){
+      console.log("[gulp-velocity] info:", colors.yellow("skipping context to: " + tplFileName));
+      return opt.defaultContext || {};
+    }
+
     throw new Error(PLUGIN_NAME + ": the corresponding data file [" + datafileAbsPath + "] is not exists!");
   }
   
